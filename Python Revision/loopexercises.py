@@ -37,3 +37,36 @@ for i in a :
     count = count - 1
     print("The reverse value at index", index, "is:", a[index])
 print("Finished with the reverse loop")
+
+# Result: This will print the elements of the list a in reverse order, along with their indices, and finally print "Finished with the reverse loop".
+
+# exercise 4:
+
+for i in range(10) :
+    print("* " * i)
+
+print("\n")
+# Result: This will print a right-angled triangle pattern of asterisks, with each row containing an increasing number of asterisks from 1 to 9.
+    
+# exercise 5:
+
+for i in range(10) :
+    print("* " * (9-i))
+
+print("\n")
+# Result: This will print an inverted right-angled triangle pattern of asterisks, with each row containing a decreasing number of asterisks from 9 to 1.
+
+# exercise 6:
+
+arr1 = [1, 2, 3, 4, 5]
+arr2 = [6, 7, 8, 9, 10]
+sumproduct = 0
+for i in arr1:
+    for j in arr2:
+        product = i * j
+        sumproduct = sumproduct + product
+        print(f"Product of {i} and {j} is: {product}")
+print("The total sum of products is: ", sumproduct)
+
+# Result: This will calculate the product of each element in arr1 with each element in arr2, print each product, and finally print the total sum of all products.
+
