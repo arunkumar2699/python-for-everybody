@@ -155,16 +155,21 @@ for i in range(1,10) :
 string = "Hey this is a string in python and i am going to count the vowels in it"
 
 vowels = "aeiouAEIOU"
+spaces = " "
 count_vowels = 0
 count_consonants = 0
+count_spaces = 0
 for char in string:
     if char in vowels:
         count_vowels = count_vowels + 1
+    elif char in spaces:
+        count_spaces = count_spaces + 1
     else:
         count_consonants = count_consonants + 1
 
 print("The total number of vowels in the string is: ", count_vowels)
 print("The total number of consonants in the string is: ", count_consonants)
+print("The total number of spaces in the string is: ", count_spaces)
 
 # Result: This will count the number of vowels (both uppercase and lowercase) in the given string and print the total count.
 
