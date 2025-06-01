@@ -150,3 +150,21 @@ for i in range(1,10) :
 
 # Result: This will print the first 9 terms of the Fibonacci sequence, where each term is the sum of the two preceding terms, starting with 1 and 1 for the first two terms. The output will show each term along with its index in the sequence.
 
+# exercise 9:
+
+string = "Hey this is a string in python and i am going to count the vowels in it"
+
+vowels = "aeiouAEIOU"
+count_vowels = 0
+count_consonants = 0
+for char in string:
+    if char in vowels:
+        count_vowels = count_vowels + 1
+    else:
+        count_consonants = count_consonants + 1
+
+print("The total number of vowels in the string is: ", count_vowels)
+print("The total number of consonants in the string is: ", count_consonants)
+
+# Result: This will count the number of vowels (both uppercase and lowercase) in the given string and print the total count.
+
