@@ -7,13 +7,13 @@ Reverse a list without using reverse() -- Done ✅
 
 Count vowels in a string using a loop -- Done ✅
 
-Find all prime numbers between 1 to 100 -- Not done ❌
+Find all prime numbers between 1 to 100 -- Done ✅
 
 Generate Fibonacci sequence up to n terms -- Done using three methods ✅
 
 Check if a number is prime using a loop -- Not done ❌
 
-Check if a string is a palindrome using a loop -- Not done ❌
+Check if a string is a palindrome using a loop -- Done ✅
 
 Nested loop: print multiplication table from 1 to 10 -- Not done ❌
 
