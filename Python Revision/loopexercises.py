@@ -1,3 +1,58 @@
+""" 🔁 Intermediate Loop Exercises (1 - 25)
+Sum of all elements in a list -- Done ✅
+
+Print a pattern of * in a triangle format (right-aligned) -- Done ✅
+
+Reverse a list without using reverse() -- Done ✅
+
+Count vowels in a string using a loop -- Done ✅
+
+Find all prime numbers between 1 to 100 -- Not done ❌
+
+Generate Fibonacci sequence up to n terms -- Done using three methods ✅
+
+Check if a number is prime using a loop -- Not done ❌
+
+Check if a string is a palindrome using a loop -- Not done ❌
+
+Nested loop: print multiplication table from 1 to 10 -- Not done ❌
+
+Flatten a 2D list using nested loops -- Not done ❌
+
+Count frequency of elements in a list using a loop -- Not done ❌
+
+Print elements on even positions from a list -- Not done ❌
+
+Print numbers from 1 to 100, replacing multiples of 3 with “Fizz”, 5 with “Buzz”, and both with “FizzBuzz” -- Not done ❌
+
+Find common elements in two lists without using set -- Not done ❌
+
+Rotate a list k times using a loop -- Not done ❌
+
+Find factorial using a loop -- Not done ❌
+
+Convert a list of integers to their squares using a loop -- Not done ❌
+
+Remove duplicates from a list using loops only -- Not done ❌
+
+Check if two strings are anagrams (using dictionary and loops) -- Not done ❌
+
+Calculate average, min, and max of list elements -- Not done ❌
+
+Generate Pascal's Triangle -- Not done ❌
+
+Transpose a matrix using nested loops -- Not done ❌
+
+Sort a list using Bubble Sort logic -- Not done ❌
+
+Find pairs in a list that sum to a target value -- Not done ❌
+
+Check if a number is Armstrong using a loop -- Not done ❌
+
+Create a pattern of numbers (e.g. pyramid, inverse pyramid) -- Not done ❌
+
+"""
+
 # exercise 1:
 
 a = [2,5,9,0,3,5]
@@ -28,6 +83,7 @@ print("\n")
 
 
 # exercise 3: Reverse loop
+
 # Method 1: 
 count = 0
 for i in a :
@@ -106,7 +162,7 @@ for i in arr1:
         sumproduct = sumproduct + product
         print(f"Product of {i} and {j} is: {product}")
 print("The total sum of products is: ", sumproduct)
-
+print("\n")
 # Result: This will calculate the product of each element in arr1 with each element in arr2, print each product, and finally print the total sum of all products.
 
 
@@ -125,7 +181,7 @@ print("The sum of arr1 is: ", sum1)
 for j in arr2 :
     sum2 = sum2 + j
 print("The sum of arr2 is: ", sum2)
-
+print("\n")
 # Result: This will calculate the sum of all elements in arr1 and arr2 separately, printing each sum.
 
 
@@ -147,8 +203,45 @@ for i in range(1,10) :
         first_term = second_term
         second_term = next_term
         print("The", i, "term", "is: ", next_term)
-
+print("Finished with the Fibonacci sequence")
+print("\n")
 # Result: This will print the first 9 terms of the Fibonacci sequence, where each term is the sum of the two preceding terms, starting with 1 and 1 for the first two terms. The output will show each term along with its index in the sequence.
+
+# Method 2: Using recursion
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+for i in range(1,10):
+    print("The", i, "term", "is: ", fibonacci(i))
+print("\n")
+# Result: This will also print the first 10 terms of the Fibonacci sequence using a recursive function, where each term is calculated based on the two preceding terms.
+
+# Method 3: Using a while loop
+
+a ,b = 1, 1
+n= 1
+while n <= 10:
+    if n == 1:
+        print("The", n , "term is:", a)
+    elif n==2:
+        print("The", n , "term is:", b)
+    else:
+        c = a + b
+        a = b
+        b = c
+        print("The", n , "term is:", c)
+    n = n + 1
+
+print("Finished with the Fibonacci sequence using while loop")
+print("\n")
+# Result: This will also print the first 10 terms of the Fibonacci sequence using a while loop, where each term is calculated based on the two preceding terms, starting with 1 and 1 for the first two terms.
+
+
+
 
 # exercise 9:
 
@@ -170,6 +263,55 @@ for char in string:
 print("The total number of vowels in the string is: ", count_vowels)
 print("The total number of consonants in the string is: ", count_consonants)
 print("The total number of spaces in the string is: ", count_spaces)
+print("\n")
 
 # Result: This will count the number of vowels (both uppercase and lowercase) in the given string and print the total count.
 
+
+
+# exercise 10:
+
+# Method 1 : Using for loop
+is_prime = True
+for i in range(1, 101):
+    if i < 2:
+        continue
+    elif i == 2:
+        print(i, "is a prime number")
+    else:
+        for j in range(2, int(i**0.5) + 1):
+            if i % j == 0:
+                is_prime = False
+                break
+        if is_prime:
+            print(i, "is a prime number")
+        else:
+            print(i, "is not a prime number")
+        
+    is_prime = True
+print("\n")
+
+# Result: This will check each number from 1 to 100 to determine if it is a prime number. It will print each prime number found, and for non-prime numbers, it will indicate that they are not prime.
+
+# Method 2: Using a while loop
+n = 1
+prime = []
+while n <= 100:
+    if n < 2:
+        n = n + 1
+        continue
+    elif n == 2:
+        print(n, "is a prime number")
+        prime.append(n)
+    else:
+        is_prime = True
+        for j in range(2, int(n**0.5) + 1):
+            if n % j == 0:
+                is_prime = False
+                break
+        if is_prime:
+            print(n, "is a prime number")
+            prime.append(n)
+    n = n + 1
+print(prime)
+print("\n")
