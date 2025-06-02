@@ -315,3 +315,26 @@ while n <= 100:
     n = n + 1
 print(prime)
 print("\n")
+
+# Result: This will also check each number from 1 to 100 to determine if it is a prime number using a while loop. It will print each prime number found and store them in a list called `prime`.
+
+
+
+# exercise 11:
+
+palindrome_string = input("Enter a string to check if it is a palindrome: ")
+
+is_palindrome = True
+for i in range(len(palindrome_string)):
+    if palindrome_string[i] != palindrome_string[len(palindrome_string) - 1 - i]:
+        is_palindrome = False
+        print(f"{palindrome_string} is not a palindrome")
+        break
+if is_palindrome:
+        print(f"{palindrome_string} is a palindrome")
+print("\n")
+# Result: This will check if the input string is a palindrome by comparing characters from the start and end of the string, moving towards the center. It will print whether the string is a palindrome or not.
+
+
+
+# exercise 12:
