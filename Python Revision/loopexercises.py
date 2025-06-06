@@ -11,15 +11,15 @@ Find all prime numbers between 1 to 100 -- Done ✅
 
 Generate Fibonacci sequence up to n terms -- Done using three methods ✅
 
-Check if a number is prime using a loop -- Not done ❌
+Check if a number is prime using a loop -- Done ✅
 
 Check if a string is a palindrome using a loop -- Done ✅
 
-Nested loop: print multiplication table from 1 to 10 -- Not done ❌
+Nested loop: print multiplication table from 1 to 10 -- Done ✅
 
 Flatten a 2D list using nested loops -- Not done ❌
 
-Count frequency of elements in a list using a loop -- Not done ❌
+Count frequency of elements in a list using a loop -- done ✅
 
 Print elements on even positions from a list -- Not done ❌
 
@@ -323,7 +323,7 @@ print("\n")
 # exercise 11:
 
 palindrome_string = input("Enter a string to check if it is a palindrome: ")
-
+palindrome_string = palindrome_string.lower().replace(" ", "")        # Normalize the string by converting to lowercase and removing spaces
 is_palindrome = True
 for i in range(len(palindrome_string)):
     if palindrome_string[i] != palindrome_string[len(palindrome_string) - 1 - i]:
@@ -333,6 +333,7 @@ for i in range(len(palindrome_string)):
 if is_palindrome:
         print(f"{palindrome_string} is a palindrome")
 print("\n")
+
 # Result: This will check if the input string is a palindrome by comparing characters from the start and end of the string, moving towards the center. It will print whether the string is a palindrome or not.
 
 
@@ -358,3 +359,45 @@ else:
 print("\n")
 
 # Result: This will check if the input number is prime by testing divisibility from 2 up to the square root of the number. It will print whether the number is prime or not
+
+
+
+# exercise 13:
+
+for i in range(1, 11):
+    for j in range(1, 11):
+        print(f"{i} x {j} = {i * j}")
+    print("\n")
+
+# Result: This will print the multiplication table from 1 to 10, showing each multiplication operation in a formatted manner, with a new line after each table for clarity.
+
+
+
+# exercise 14:
+
+
+matrix1 = [2,5,3,4,6,3,4,2,7,7,3,4]
+
+for i in range(0, len(matrix1)):
+    count = 0
+    for j in range(0, len(matrix1)):
+        if matrix1[i] == matrix1[j] :
+            count = count  + 1
+    print(f"The count of element {matrix1[i]} is : {count}")
+    print("\n")
+
+# Result: This will iterate through the list `matrix1` and count how many times each element appears at its own index, printing the count for each index.
+
+# Method 2 :
+
+matrix1 = [2, 5, 3, 4, 6, 3, 4, 2, 7, 7, 3, 4]
+already_counted = []
+
+for i in range(len(matrix1)):
+    if matrix1[i] not in already_counted:
+        count = 0
+        for j in range(len(matrix1)):
+            if matrix1[i] == matrix1[j]:
+                count += 1
+        already_counted.append(matrix1[i])
+        print(f"{matrix1[i]} appears {count} times\n")
