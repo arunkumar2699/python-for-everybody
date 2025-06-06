@@ -21,9 +21,9 @@ Flatten a 2D list using nested loops -- Not done ❌
 
 Count frequency of elements in a list using a loop -- done ✅
 
-Print elements on even positions from a list -- Not done ❌
+Print elements on even positions from a list -- Done ✅
 
-Print numbers from 1 to 100, replacing multiples of 3 with “Fizz”, 5 with “Buzz”, and both with “FizzBuzz” -- Not done ❌
+Print numbers from 1 to 100, replacing multiples of 3 with “Fizz”, 5 with “Buzz”, and both with “FizzBuzz” -- Done ✅
 
 Find common elements in two lists without using set -- Not done ❌
 
@@ -401,3 +401,64 @@ for i in range(len(matrix1)):
                 count += 1
         already_counted.append(matrix1[i])
         print(f"{matrix1[i]} appears {count} times\n")
+
+# Result: This will count the frequency of each unique element in the list `matrix1` and print the count for each element, ensuring that each element is counted only once.
+
+
+
+# exercise 15:
+
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for i in range(len(list1)):
+    if i % 2 == 0:
+        print(f"The element at even index {i} is: {list1[i]}")
+print("\n")
+
+# Result: This will print the elements of `list1` that are located at even indices, along with their index values.
+
+
+
+# exercise 16:
+
+number = list(range(1, 101))
+
+for i in range(len(number)):
+    if number[i] % 3 == 0 and number[i] % 5 == 0:
+        number[i] = "FizzBuzz"
+    elif number[i] % 3 == 0:
+        number[i] = "Fizz"
+    elif number[i] % 5 == 0:
+        number[i]= "Buzz"
+    
+print(number)
+
+
+
+# exercise 17: Find factorial using a loop
+
+# method 1 : Using loop
+
+factorial1 = input("To find Factorial of: ", )
+factorial1 = int(factorial1)
+fact = 1
+
+for i in range(1, factorial1 + 1):
+    fact = fact * i
+    fact = fact
+
+print(f"The factorial of {factorial1} is : {fact} ")
+
+# Method 2 : Using recurssion and function
+
+num = input("To find Factorial of: ")
+num = int(num)
+def factorial(num):
+    if num == 0 or num == 1:
+        return 1
+    else:
+        return num * factorial(num - 1)
+
+print(f"The factorial of {num} is: {factorial(num)}")
+
+
