@@ -29,7 +29,7 @@ Find common elements in two lists without using set -- Not done ❌
 
 Rotate a list k times using a loop -- Not done ❌
 
-Find factorial using a loop -- Not done ❌
+Find factorial using a loop -- Done ✅
 
 Convert a list of integers to their squares using a loop -- Not done ❌
 
@@ -339,9 +339,14 @@ print("\n")
 
 
 # exercise 12:
-
-number = int(input("Enter a number to check if it is prime: "))
-number = int(number)
+while True:
+    try :
+        number = int(input("Enter a number to check if it is prime: "))
+        number = int(number)
+    except :
+        print("Please enter a valid integer.")
+        continue
+    break
 
 is_prime = True
 
@@ -462,3 +467,28 @@ def factorial(num):
 print(f"The factorial of {num} is: {factorial(num)}")
 
 
+
+# exercise 18 : Convert a list of integers to their squares using a loop
+
+no_of_elements = input("What will be the length of array: " )
+no_of_elements = int(no_of_elements)
+array = []
+for i in range(no_of_elements) :
+    element = input(f"Enter the {i}th element: " )
+    element = int(element)
+    array.append(element)
+
+print(array)
+
+for i in range(len(array)) :
+    array[i] = array[i] * array [i]
+
+print(f" The square of array is {array}")
+
+# Result: This will take a list of integers as input, calculate the square of each integer, and print the resulting list of squares.
+
+# Method 2: Using list comprehension
+squares = [x**2 for x in array]
+print(f"The squares of the array using list comprehension are: {squares}")
+
+# Result: This will also calculate the square of each integer in the list using list comprehension and print the resulting list of squares. 
