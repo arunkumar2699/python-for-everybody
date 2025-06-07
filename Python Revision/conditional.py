@@ -58,3 +58,4 @@
 # 50. Simulate a chatbot that responds differently to greetings, questions, and farewells.
 
 
+# 1. Check if three given numbers form a Pythagorean triplet.
