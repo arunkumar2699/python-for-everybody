@@ -59,3 +59,68 @@
 
 
 # 1. Check if three given numbers form a Pythagorean triplet.
+
+base = int(input("Enter the value of base: "))
+perpendicular = int(input("Enter the value of perpendicular: "))
+hypoteneous = int(input("Enter the value of hypoteneous: "))
+
+if (hypoteneous ** 2 == perpendicular **2 + base **2) :
+    print("It's a pythagorean triplet")
+else :
+    print("Not a pythagorean triplet")
+
+
+
+
+# 2. Determine if a given year is a leap year using nested conditionals.
+
+year = int(input("Enter the year: " ))
+
+if (year % 4 == 0):
+    if (year % 100 == 0):
+        if (year % 400 == 0):
+            print("It's a leap year")
+        else:
+            print("Not a leap year")
+    else:
+        print("It's a leap year")
+else:
+    print("Not a leap year")
+
+
+# 3. Find the median of three integers using conditionals.
+
+length_of_array = int(input("length of the array is: "))
+array = []
+for i in range(length_of_array) :
+    value = int(input(f"the value of {i}th element is: " ))
+    array.append(value)
+
+print(array)
+'''
+if length_of_array == 3:
+    if (array[0] >= array[1] and array[0] <= array[2]) or (array[0] <= array[1] and array[0] >= array[2]):
+        print(f"The median is {array[0]}")
+    elif (array[1] >= array[0] and array[1] <= array[2]) or (array[1] <= array[0] and array[1] >= array[2]):
+        print(f"The median is {array[1]}")
+    else:
+        print(f"The median is {array[2]}")
+elif length_of_array == 2:
+    if array[0] > array[1]:
+        print(f"The median is {array[0]}")
+    else:
+        print(f"The median is {array[1]}")
+elif length_of_array == 1:
+    print(f"The median is {array[0]}")
+else:
+    print("Invalid length of array. Please enter a length of 1, 2, or 3.")
+'''
+
+# sorting the array to find the median using for loop
+
+for i in range(length_of_array):
+    for j in range(i + 1, length_of_array):
+        if array[i] > array[j]:
+            array[i], array[j] = array[j], array[i]
+
+print(array)
